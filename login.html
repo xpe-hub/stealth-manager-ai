@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stealth-manager-ai - Login | Bypass Supreme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* DARK THEME SUPREMO */
+            --bg-primary: #000000;
+            --bg-secondary: #0A0A0A;
+            --bg-tertiary: #1A1A1A;
+            --bg-card: rgba(15, 15, 15, 0.95);
+            --bg-glass: rgba(26, 26, 26, 0.9);
+            
+            /* ACCENT COLORS */
+            --primary-50: #FF0080;
+            --primary-100: #E6006E;
+            --accent-cyan: #00FFFF;
+            --accent-yellow: #FFFF00;
+            --accent-green: #00FF41;
+            --accent-orange: #FF6600;
+            --accent-purple: #8000FF;
+            
+            /* TEXT COLORS */
+            --text-primary: #FFFFFF;
+            --text-secondary: #CCCCCC;
+            --text-muted: #888888;
+            --text-accent: var(--accent-cyan);
+            
+            /* EFFECTS */
+            --neon-glow-pink: 0 0 20px var(--primary-50), 0 0 40px var(--primary-50);
+            --neon-glow-cyan: 0 0 20px var(--accent-cyan), 0 0 40px var(--accent-cyan);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a0000 25%, #330000 50%, #1a0000 75%, #000000 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* CYBER PARTICLES BACKGROUND */
+        .cyber-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 0, 0.3) 0%, transparent 50%);
+        }
+
+        /* MAIN CONTAINER */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 0, 128, 0.3);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-50), var(--accent-cyan), transparent);
+            animation: scanline 3s infinite;
+        }
+
+        @keyframes scanline {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* LOGO SECTION */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .ai-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .ai-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 30px rgba(255, 0, 128, 0.5));
+            animation: logoPulse 3s infinite;
+        }
+
+        @keyframes logoPulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 20px rgba(255, 0, 128, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 40px rgba(255, 0, 128, 0.8), 0 0 60px rgba(0, 255, 255, 0.3));
+            }
+        }
+
+        .app-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-50), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+        }
+
+        .app-subtitle {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .epic-phrase {
+            font-family: 'Orbitron', monospace;
+            font-size: 1em;
+            color: var(--primary-50);
+            font-weight: 600;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px var(--primary-50);
+            }
+            to {
+                text-shadow: 0 0 20px var(--primary-50), 0 0 30px var(--primary-50);
+            }
+        }
+
+        /* LOGIN FORM */
+        .login-form {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-50);
+            box-shadow: var(--neon-glow-pink);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-50);
+        }
+
+        .password-group {
+            position: relative;
+        }
+
+        /* LOGIN BUTTON */
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary-50), var(--accent-cyan));
+            border: none;
+            border-radius: 12px;
+            color: #000;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.4);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .login-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .login-btn:hover::before {
+            left: 100%;
+        }
+
+        /* SOCIAL LOGIN */
+        .social-login {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .social-divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: var(--text-muted);
+        }
+
+        .social-divider::before,
+        .social-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .social-divider span {
+            padding: 0 20px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .social-btn i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* FOOTER */
+        .login-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .discord-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .discord-link:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: var(--neon-glow-cyan);
+        }
+
+        .discord-link i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        /* FREE FIRE THEME */
+        .freefire-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #FF6600, #FF0033);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .freefire-badge i {
+            margin-right: 8px;
+        }
+
+        /* LOADING ANIMATION */
+        .loading {
+            display: none;
+            color: var(--accent-cyan);
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 15px;
+            }
+            
+            .login-card {
+                padding: 30px 25px;
+            }
+            
+            .app-title {
+                font-size: 1.8em;
+            }
+            
+            .ai-logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-bg"></div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo-section">
+                <div class="ai-logo-container">
+                    <!-- AI Logo SVG -->
+                    <svg class="ai-logo" viewBox="0 0 200 200">
+                        <defs>
+                            <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+                                <stop offset="0%" style="stop-color:#FF0080;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#800026;stop-opacity:1" />
+                            </radialGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge> 
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Background Circle -->
+                        <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" stroke="#00FFFF" stroke-width="2"/>
+                        
+                        <!-- Hair Effect -->
+                        <path d="M 60 50 Q 70 30, 85 45 Q 90 35, 100 30 Q 110 35, 115 45 Q 130 30, 140 50 L 140 70 Q 130 65, 120 70 Q 110 75, 100 72 Q 90 75, 80 70 Q 70 65, 60 70 Z" fill="#FFFFFF" opacity="0.9"/>
+                        
+                        <!-- Eye -->
+                        <ellipse cx="100" cy="85" rx="15" ry="8" fill="#00FFFF" filter="url(#glow)"/>
+                        <circle cx="100" cy="85" r="5" fill="#000000"/>
+                        <circle cx="102" cy="83" r="2" fill="#FFFFFF"/>
+                        
+                        <!-- Broken Glass Effect -->
+                        <path d="M 70 100 L 90 85 M 110 95 L 130 105 M 85 115 L 115 110 M 75 125 L 95 120" stroke="#00FFFF" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- AI Text -->
+                        <text x="100" y="140" text-anchor="middle" font-family="Orbitron" font-size="16" font-weight="bold" fill="#FFFFFF">AI</text>
+                        <text x="100" y="155" text-anchor="middle" font-family="Orbitron" font-size="8" fill="#00FFFF">STEALTH</text>
+                    </svg>
+                </div>
+                
+                <h1 class="app-title">STEALTH-MANAGER-AI</h1>
+                <p class="app-subtitle">Free Fire Bypass System</p>
+                <div class="freefire-badge">
+                    <i class="fas fa-fire"></i>
+                    FREE FIRE BYPASS
+                </div>
+                <p class="epic-phrase">🔥 NO LOGS NO CRIME | 🐉 XITEA CON ESTILO</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="username">Usuario</label>
+                    <input type="text" id="username" class="form-input" placeholder="Ingresa tu usuario" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Contraseña</label>
+                    <div class="password-group">
+                        <input type="password" id="password" class="form-input" placeholder="Ingresa tu contraseña" required>
+                        <i class="fas fa-eye password-toggle" onclick="togglePassword()"></i>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> ACCEDER AL BYPASS
+                </button>
+                
+                <div class="loading" id="loading">
+                    Iniciando sistema de bypass...
+                </div>
+            </form>
+            
+            <div class="social-login">
+                <div class="social-divider">
+                    <span>O inicia sesión con</span>
+                </div>
+                
+                <a href="#" class="social-btn" onclick="loginWithDiscord()" data-provider="discord">
+                    <i class="fab fa-discord"></i>
+                    Discord Community
+                </a>
+                
+                <a href="#" class="social-btn" onclick="loginWithGoogle()" data-provider="google">
+                    <i class="fab fa-google"></i>
+                    Google
+                </a>
+                
+                <a href="#" class="social-btn" onclick="loginWithGitHub()" data-provider="github">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+            
+            <div class="login-footer">
+                <div class="copyright">
+                    © 2024 xpe.nettt - Todos los derechos reservados
+                </div>
+                
+                <a href="https://discord.gg/VA2qB3ct5b" target="_blank" class="discord-link">
+                    <i class="fab fa-discord"></i>
+                    Community Stealth - Discord
+                </a>
+                
+                <div style="margin-top: 20px;">
+                    <p style="color: var(--text-muted); font-size: 0.9em;">
+                        💎 Sistema de bypass indetectable para Free Fire<br>
+                        🔥 DLL Injection + Memory Patching + Anti-Detection
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- OAuth Management Script -->
+    <script src="oauth.js"></script>
+    
+    <script>
+        // PASSWORD TOGGLE
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+        
+        // LOGIN WITH DISCORD
+        function loginWithDiscord() {
+            // Redirect to Discord OAuth or community
+            window.location.href = 'https://discord.gg/VA2qB3ct5b';
+        }
+        
+        // LOGIN WITH GOOGLE
+        function loginWithGoogle() {
+            // Real OAuth will handle this via oauth.js
+            if (window.oauthManager) {
+                window.oauthManager.loginWithProvider('google');
+            } else {
+                // Fallback for old browsers
+                window.location.href = '/auth/google/login';
+            }
+        }
+        
+        // LOGIN WITH GITHUB
+        function loginWithGitHub() {
+            // Real OAuth will handle this via oauth.js
+            if (window.oauthManager) {
+                window.oauthManager.loginWithProvider('github');
+            } else {
+                // Fallback for old browsers
+                window.location.href = '/auth/github/login';
+            }
+        }
+        
+        // LOGIN FORM HANDLER
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loading = document.getElementById('loading');
+            const loginBtn = document.querySelector('.login-btn');
+            
+            if (username && password) {
+                // Show loading
+                loading.style.display = 'block';
+                loginBtn.disabled = true;
+                loginBtn.style.opacity = '0.7';
+                
+                // Simulate authentication
+                setTimeout(() => {
+                    // Store user session
+                    localStorage.setItem('stealthUser', JSON.stringify({
+                        username: username,
+                        loginTime: new Date().toISOString(),
+                        isLogged: true
+                    }));
+                    
+                    // Redirect to main app
+                    window.location.href = 'index_ultimate.html';
+                }, 2000);
+            } else {
+                alert('Por favor completa todos los campos');
+            }
+        });
+        
+        // CHECK IF USER IS ALREADY LOGGED
+        window.addEventListener('load', function() {
+            const userData = localStorage.getItem('stealthUser');
+            if (userData) {
+                const user = JSON.parse(userData);
+                if (user.isLogged) {
+                    // Auto redirect if already logged
+                    setTimeout(() => {
+                        window.location.href = 'index_ultimate.html';
+                    }, 1000);
+                }
+            }
+        });
+        
+        // EPIC CONSOLE MESSAGE
+        console.log(`
+🔥 STEALTH-MANAGER-AI LOGIN SYSTEM
+💎 xpe.nettt - SUPREMA VERSION
+🎮 FREE FIRE BYPASS SYSTEM ACTIVE
+
+🛡️ NO LOGS NO CRIME - XITEA CON ESTILO 🐉
+🔥 Community: https://discord.gg/VA2qB3ct5b
+
+Ready to bypass! 🚀
+        `);
+    </script>
+</body>
+</html>
