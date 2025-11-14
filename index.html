@@ -3,60 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stealth-manager-ai - IA SUPREMA | DLLs Indetectables | Bypass Supreme</title>
+    <title>StealthHub | Professional AI Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Audiowide&family=Aldrich&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
     
     <style>
+        /* CSS Variables - Professional Theme System */
         :root {
-            /* COLOR SCHEME - CYBERPUNK SUPREMO */
-            --primary-50: #FF0080;
-            --primary-100: #E6006E;
-            --primary-200: #CC005C;
-            --primary-300: #B3004A;
-            --primary-400: #990038;
-            --primary-500: #800026;
-            --accent-cyan: #00FFFF;
-            --accent-yellow: #FFFF00;
-            --accent-green: #00FF41;
-            --accent-orange: #FF6600;
+            /* Light Theme */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --bg-tertiary: #f1f3f4;
+            --bg-hover: #f8f9fa;
             
-            /* DARK THEME SUPREMO */
-            --bg-primary: #000000;
-            --bg-secondary: #0A0A0A;
-            --bg-tertiary: #1A1A1A;
-            --bg-card: #0F0F0F;
-            --bg-glass: rgba(26, 26, 26, 0.9);
+            /* Text Colors */
+            --text-primary: #24292f;
+            --text-secondary: #656d76;
+            --text-muted: #8b949e;
             
-            /* TEXT COLORS */
-            --text-primary: #FFFFFF;
-            --text-secondary: #CCCCCC;
-            --text-muted: #888888;
-            --text-accent: var(--accent-cyan);
-            --text-warning: var(--accent-orange);
-            --text-success: var(--accent-green);
+            /* Accent Colors */
+            --accent-primary: #0969da;
+            --accent-secondary: #218bff;
+            --accent-success: #1a7f37;
+            --accent-warning: #9a6700;
+            --accent-error: #cf222e;
             
-            /* GLASS MORPHISM */
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-            --glass-blur: blur(16px);
+            /* Interactive Elements */
+            --border-primary: #d0d7de;
+            --border-secondary: #eaeef2;
+            --hover-bg: #f3f4f6;
+            --active-bg: #e1e4e8;
             
-            /* EFFECTS */
-            --neon-glow-cyan: 0 0 20px var(--accent-cyan), 0 0 40px var(--accent-cyan);
-            --neon-glow-pink: 0 0 20px var(--primary-50), 0 0 40px var(--primary-50);
-            --neon-glow-yellow: 0 0 20px var(--accent-yellow), 0 0 40px var(--accent-yellow);
-            --border-radius: 12px;
+            /* Component Specific */
+            --header-height: 64px;
+            --sidebar-width: 320px;
+            --modal-overlay: rgba(0, 0, 0, 0.72);
             
-            /* TYPOGRAPHY */
-            --font-cyber: 'Orbitron', monospace;
-            --font-tech: 'Rajdhani', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --font-futuristic: 'Audiowide', cursive;
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Monaco', 'Consolas', monospace;
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 24px;
+            --font-size-3xl: 30px;
+            
+            /* Spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
         }
 
+        /* Dark Theme - StealthHub Style */
+        [data-theme="dark"] {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --bg-hover: #3a3a3a;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            
+            --accent-primary: #00e5ff;
+            --accent-secondary: #0080ff;
+            --accent-success: #1a7f37;
+            --accent-warning: #d29922;
+            --accent-error: #f85149;
+            
+            --border-primary: #333333;
+            --border-secondary: #2a2a2a;
+            --hover-bg: #2a2a2a;
+            --active-bg: #3a3a3a;
+            
+            --modal-overlay: rgba(0, 0, 0, 0.85);
+        }
+
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -64,1078 +101,2092 @@
         }
 
         body {
-            font-family: var(--font-tech);
-            background: linear-gradient(135deg, #000000 0%, #1a0000 25%, #330000 50%, #1a0000 75%, #000000 100%);
-            background-attachment: fixed;
+            font-family: var(--font-family);
+            background: var(--bg-primary);
             color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.2s ease, color 0.2s ease;
             overflow-x: hidden;
-            min-height: 100vh;
         }
 
-        /* MATRIX BACKGROUND EFFECT */
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            opacity: 0.03;
-            background-image: 
-                linear-gradient(90deg, transparent 79px, #00FF41 79px, #00FF41 81px, transparent 81px),
-                linear-gradient(#00FF41 1px, transparent 1px);
-            background-size: 80px 100%;
-        }
-
-        /* CYBER PARTICLES */
-        .cyber-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            background: var(--accent-cyan);
-            width: 2px;
-            height: 2px;
-            border-radius: 50%;
-            animation: float 6s infinite ease-in-out;
-            opacity: 0.6;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-30px) rotate(120deg); }
-            66% { transform: translateY(30px) rotate(240deg); }
-        }
-
-        /* HEADER SUPREMO */
+        /* Header */
         .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--glass-glass);
-            backdrop-filter: var(--glass-blur);
-            border-bottom: 1px solid var(--glass-border);
-            z-index: 1000;
-            padding: 1rem 2rem;
+            height: var(--header-height);
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-primary);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 0 var(--space-xl);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
         }
 
-        .logo-section {
+        .header-left {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: var(--space-xl);
         }
 
-        .ai-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid var(--primary-50);
-            box-shadow: var(--neon-glow-pink);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .ai-avatar:hover {
-            transform: scale(1.1);
-            box-shadow: var(--neon-glow-pink), var(--neon-glow-cyan);
-        }
-
-        .logo-text {
-            font-family: var(--font-cyber);
-            font-size: 1.8rem;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--font-size-xl);
             font-weight: 800;
-            background: linear-gradient(45deg, var(--primary-50), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+            color: var(--text-primary);
+            text-decoration: none;
         }
 
-        .version-badge {
-            background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow));
-            color: #000;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* STATUS INDICATORS */
-        .status-bar {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .status-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--bg-glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 25px;
-            backdrop-filter: var(--glass-blur);
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent-green);
-            animation: pulse 2s infinite;
-        }
-
-        .status-dot.offline {
-            background: var(--accent-orange);
-        }
-
-        .status-dot.error {
-            background: var(--accent-orange);
-            animation: pulse-fast 0.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        @keyframes pulse-fast {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.2; }
-        }
-
-        /* MAIN CONTAINER */
-        .main-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            grid-template-rows: 1fr auto;
-            height: 100vh;
-            margin-top: 80px;
-            gap: 1rem;
-            padding: 1rem;
-        }
-
-        /* SIDEBAR AVANZADO */
-        .sidebar {
-            background: var(--glass-glass);
-            backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            overflow-y: auto;
-        }
-
-        .sidebar-title {
-            font-family: var(--font-cyber);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-cyan);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .category-section {
-            margin-bottom: 2rem;
-        }
-
-        .category-title {
-            color: var(--text-accent);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-item {
-            padding: 0.8rem;
-            margin-bottom: 0.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.85rem;
-        }
-
-        .feature-item:hover {
-            background: var(--bg-tertiary);
-            border-color: var(--primary-50);
-            box-shadow: var(--neon-glow-pink);
-            transform: translateX(5px);
-        }
-
-        .feature-item.active {
-            background: linear-gradient(45deg, rgba(255, 0, 128, 0.1), rgba(0, 255, 255, 0.1));
-            border-color: var(--primary-50);
-            box-shadow: var(--neon-glow-pink);
-        }
-
-        .feature-icon {
-            margin-right: 0.8rem;
-            color: var(--accent-cyan);
-        }
-
-        /* CHAT AREA SUPREMO */
-        .chat-area {
-            display: flex;
-            flex-direction: column;
-            background: var(--glass-glass);
-            backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-        }
-
-        .chat-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--glass-border);
-            background: linear-gradient(45deg, rgba(255, 0, 128, 0.05), rgba(0, 255, 255, 0.05));
-        }
-
-        .chat-title {
-            font-family: var(--font-cyber);
-            font-size: 1.3rem;
-            color: var(--accent-cyan);
-            margin-bottom: 0.5rem;
-        }
-
-        .chat-subtitle {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .chat-messages {
-            flex: 1;
-            padding: 2rem;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .message {
-            max-width: 80%;
-            padding: 1rem 1.5rem;
-            border-radius: var(--border-radius);
-            position: relative;
-            animation: slideIn 0.5s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .message.user {
-            background: linear-gradient(45deg, rgba(128, 0, 38, 0.2), rgba(204, 0, 92, 0.2));
-            border: 1px solid var(--primary-500);
-            align-self: flex-end;
-            margin-left: 20%;
-        }
-
-        .message.ai {
-            background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 65, 0.1));
-            border: 1px solid var(--accent-cyan);
-            align-self: flex-start;
-            margin-right: 20%;
-        }
-
-        .message-avatar {
+        .logo-icon {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-cyan);
-            margin-bottom: 0.5rem;
-            background: var(--bg-tertiary);
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent-cyan);
-        }
-
-        .message-content {
-            line-height: 1.6;
-        }
-
-        .message-timestamp {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            margin-top: 0.5rem;
-        }
-
-        /* CHAT INPUT AVANZADO */
-        .chat-input-container {
-            padding: 2rem;
-            border-top: 1px solid var(--glass-border);
-            background: var(--bg-secondary);
-        }
-
-        .input-wrapper {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-end;
-            max-width: 100%;
-        }
-
-        .input-main {
-            flex: 1;
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            padding: 1rem;
-            color: var(--text-primary);
-            font-family: var(--font-tech);
-            resize: none;
-            outline: none;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
             transition: all 0.3s ease;
         }
+        
+        .logo-icon:hover {
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-        .input-main:focus {
-            border-color: var(--accent-cyan);
-            box-shadow: var(--neon-glow-cyan);
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .nav-item {
+            padding: var(--space-sm) var(--space-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            background: var(--hover-bg);
+            color: var(--text-primary);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-primary);
+            color: var(--text-secondary);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: var(--hover-bg);
+            color: var(--text-primary);
+        }
+
+        /* Auth Buttons */
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .btn {
+            padding: var(--space-sm) var(--space-lg);
+            border: 1px solid var(--border-primary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .btn:hover {
+            background: var(--hover-bg);
+        }
+
+        .btn-primary {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-secondary);
+            border-color: var(--accent-secondary);
+        }
+
+        /* User Menu */
+        .user-menu {
+            position: relative;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .user-avatar:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            height: calc(100vh - var(--header-height));
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-primary);
+            padding: var(--space-xl);
+            overflow-y: auto;
+        }
+
+        .sidebar-section {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .sidebar-title {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-xs);
+            color: var(--text-secondary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            position: relative;
+        }
+
+        .category-item:hover {
+            background: var(--hover-bg);
+            color: var(--text-primary);
+        }
+
+        .category-item.active {
+            background: var(--accent-primary);
+            color: white;
+        }
+
+        .category-item.active::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent-primary);
+            border-radius: 0 2px 2px 0;
+        }
+
+        .category-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .category-count {
+            margin-left: auto;
+            background: var(--border-primary);
+            color: var(--text-muted);
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+        }
+
+        /* Chat Area */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-primary);
+        }
+
+        .chat-header {
+            padding: var(--space-xl);
+            border-bottom: 1px solid var(--border-primary);
+            background: var(--bg-primary);
+        }
+
+        .chat-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .chat-status {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            padding: var(--space-2xl);
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border-bottom: 1px solid var(--border-primary);
+            text-align: center;
+        }
+
+        .welcome-title {
+            font-size: var(--font-size-3xl);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .welcome-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .welcome-logo {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .welcome-logo-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.4));
+            transition: all 0.3s ease;
+        }
+        
+        .welcome-logo-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 40px rgba(0, 229, 255, 0.6));
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--bg-primary);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-primary);
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            flex: 1;
+            padding: var(--space-xl);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            max-width: 85%;
+            animation: messageSlide 0.3s ease;
+        }
+
+        @keyframes messageSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            align-self: flex-end;
+            align-items: flex-end;
+        }
+
+        .message.ai {
+            align-self: flex-start;
+            align-items: flex-start;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xs);
+            font-size: var(--font-size-xs);
+            color: var(--text-muted);
+        }
+
+        .message-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+        }
+
+        .message.user .message-avatar {
+            background: var(--accent-primary);
+            color: white;
+        }
+
+        .message.ai .message-avatar {
+            background: var(--text-muted);
+            color: white;
+        }
+
+        .message-bubble {
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            word-wrap: break-word;
+            position: relative;
+        }
+
+        .message.user .message-bubble {
+            background: var(--accent-primary);
+            color: white;
+            border-bottom-right-radius: var(--radius-sm);
+        }
+
+        .message.ai .message-bubble {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-primary);
+            border-bottom-left-radius: var(--radius-sm);
+        }
+
+        .message-time {
+            font-size: var(--font-size-xs);
+            color: var(--text-muted);
+            margin-top: var(--space-xs);
+        }
+
+        /* Chat Input */
+        .chat-input-container {
+            padding: var(--space-xl);
+            border-top: 1px solid var(--border-primary);
+            background: var(--bg-primary);
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: var(--space-md);
+            align-items: flex-end;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-md);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .chat-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: var(--font-size-base);
+            font-family: var(--font-family);
+            resize: none;
+            max-height: 120px;
+            min-height: 24px;
+            line-height: 1.6;
+            background: transparent;
+            color: var(--text-primary);
+        }
+
+        .chat-input::placeholder {
+            color: var(--text-muted);
         }
 
         .input-actions {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .action-btn {
-            padding: 1rem;
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .action-btn:hover {
-            background: var(--bg-tertiary);
-            color: var(--accent-cyan);
-            border-color: var(--accent-cyan);
-            transform: scale(1.05);
+            gap: var(--space-sm);
+            align-items: center;
         }
 
         .send-btn {
-            background: linear-gradient(45deg, var(--primary-50), var(--accent-cyan));
-            color: #000;
+            background: var(--accent-primary);
             border: none;
-            font-weight: 600;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: white;
         }
 
         .send-btn:hover {
-            box-shadow: var(--neon-glow-cyan);
-            transform: scale(1.1);
+            background: var(--accent-secondary);
+            transform: scale(1.05);
         }
 
-        /* QUICK ACTIONS PANEL */
-        .quick-actions {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 1.5rem;
-            background: var(--glass-glass);
-            backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
+        .send-btn:disabled {
+            background: var(--text-muted);
+            cursor: not-allowed;
+            transform: none;
         }
 
-        .quick-action {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            text-align: center;
-            cursor: pointer;
+        /* Profile Modal */
+        .profile-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
             transition: all 0.3s ease;
-            position: relative;
+        }
+
+        .profile-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .profile-content {
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            width: 100%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-modal.show .profile-content {
+            transform: scale(1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin: 0 auto var(--space-md);
+        }
+
+        .profile-name {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .profile-email {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .profile-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .profile-section-title {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .tag {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            border: 1px solid var(--border-primary);
+        }
+
+        .tag.skill {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+        }
+
+        .tag.interest {
+            background: var(--accent-success);
+            color: white;
+            border-color: var(--accent-success);
+        }
+
+        .tag.specialty {
+            background: var(--accent-warning);
+            color: white;
+            border-color: var(--accent-warning);
+        }
+
+        /* Login Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            width: 100%;
+            max-width: 400px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .modal-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .modal-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+        
+        .modal-logo {
+            margin-bottom: var(--space-md);
+        }
+        
+        .modal-logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .modal-logo-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            font-family: var(--font-family);
+            transition: border-color 0.2s ease;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-md);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: var(--font-size-sm);
+        }
+
+        .checkbox-item:hover {
+            background: var(--hover-bg);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent-primary);
+        }
+
+        /* Formulario Mejorado para Competir con GitHub */
+        .signup-section {
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-primary);
+        }
+
+        .section-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .section-description {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            font-family: var(--font-family);
+            transition: border-color 0.2s ease;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+        }
+
+        /* Foto de Perfil */
+        .profile-photo-upload {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .photo-preview {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--border-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            color: var(--text-muted);
             overflow: hidden;
         }
 
-        .quick-action::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .photo-preview img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 128, 0.2), transparent);
-            transition: left 0.5s ease;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
-        .quick-action:hover::before {
-            left: 100%;
+        .file-input {
+            display: none;
         }
 
-        .quick-action:hover {
-            border-color: var(--primary-50);
-            box-shadow: var(--neon-glow-pink);
-            transform: translateY(-5px);
+        /* Selector de Experiencia */
+        .experience-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
         }
 
-        .quick-action-icon {
-            font-size: 2.5rem;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
+        .experience-option {
+            cursor: pointer;
         }
 
-        .quick-action-title {
-            font-family: var(--font-cyber);
-            font-size: 1.1rem;
+        .experience-option input[type="radio"] {
+            display: none;
+        }
+
+        .experience-card {
+            padding: var(--space-lg);
+            border: 2px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.2s ease;
+            background: var(--bg-primary);
+        }
+
+        .experience-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .experience-option input[type="radio"]:checked + .experience-card {
+            border-color: var(--accent-primary);
+            background: var(--bg-hover);
+        }
+
+        .experience-icon {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-sm);
+        }
+
+        .experience-card h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-xs);
         }
 
-        .quick-action-desc {
-            font-size: 0.85rem;
+        .experience-card p {
+            font-size: var(--font-size-sm);
             color: var(--text-secondary);
         }
 
-        /* LOADING ANIMATIONS */
+        /* Grid de Categor铆as con Nivel */
+        .category-experience-grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .category-experience {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+
+        .category-experience:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .category-label {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .category-label input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent-primary);
+        }
+
+        .level-select {
+            padding: var(--space-xs) var(--space-sm);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-sm);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .level-select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        /* Sistema de Badges */
+        .badges-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .badge-option {
+            cursor: pointer;
+        }
+
+        .badge-option input[type="checkbox"] {
+            display: none;
+        }
+
+        .badge-card {
+            padding: var(--space-lg);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.2s ease;
+            background: var(--bg-primary);
+        }
+
+        .badge-card:hover {
+            border-color: var(--accent-warning);
+            transform: translateY(-2px);
+        }
+
+        .badge-option input[type="checkbox"]:checked + .badge-card {
+            border-color: var(--accent-warning);
+            background: var(--bg-hover);
+        }
+
+        .badge-icon {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-sm);
+        }
+
+        .badge-card span {
+            display: block;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Bot贸n Mejorado */
+        .btn-full {
+            width: 100%;
+            margin-top: var(--space-lg);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            padding: var(--space-md) var(--space-xl);
+        }
+
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 0 var(--space-md);
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .sidebar {
+                position: fixed;
+                left: -320px;
+                top: var(--header-height);
+                height: calc(100vh - var(--header-height));
+                z-index: 1500;
+                transition: left 0.3s ease;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+            
+            .main-container {
+                flex: 1;
+            }
+            
+            .message {
+                max-width: 95%;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
         .loading-dots {
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
+            gap: 4px;
+            padding: var(--space-md);
         }
 
         .dot {
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: var(--accent-cyan);
+            background: var(--text-muted);
             animation: bounce 1.4s infinite ease-in-out both;
         }
 
         .dot:nth-child(1) { animation-delay: -0.32s; }
         .dot:nth-child(2) { animation-delay: -0.16s; }
+        .dot:nth-child(3) { animation-delay: 0s; }
 
         @keyframes bounce {
-            0%, 80%, 100% {
-                transform: scale(0);
-            }
-            40% {
-                transform: scale(1);
-            }
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
         }
 
-        /* CODE BLOCKS */
-        .code-block {
-            background: #000;
-            border: 1px solid var(--accent-cyan);
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            margin: 1rem 0;
-            position: relative;
-            overflow-x: auto;
-        }
-
-        .code-header {
-            background: var(--bg-tertiary);
-            padding: 0.5rem 1rem;
-            border-bottom: 1px solid var(--accent-cyan);
-            font-family: var(--font-cyber);
-            font-size: 0.8rem;
-            color: var(--accent-cyan);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .copy-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--accent-cyan);
-            border-radius: 4px;
-            padding: 0.3rem 0.6rem;
-            color: var(--accent-cyan);
-            font-size: 0.7rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .copy-btn:hover {
-            background: var(--accent-cyan);
-            color: #000;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr auto auto;
-            }
-            
-            .sidebar {
-                display: none;
-            }
-            
-            .header {
-                padding: 1rem;
-            }
-            
-            .logo-text {
-                font-size: 1.4rem;
-            }
-            
-            .status-bar {
-                gap: 0.5rem;
-            }
-            
-            .status-item {
-                padding: 0.3rem 0.6rem;
-            }
-            
-            .quick-actions {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-            
-            .chat-messages {
-                padding: 1rem;
-            }
-            
-            .input-wrapper {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            
-            .input-actions {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-
-        /* HIDDEN CLASSES */
+        /* Utility Classes */
         .hidden {
             display: none !important;
         }
 
-        /* UTILITY CLASSES */
-        .text-gradient {
-            background: linear-gradient(45deg, var(--primary-50), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .text-muted {
+            color: var(--text-muted);
         }
 
-        .neon-text {
-            text-shadow: 0 0 10px currentColor;
+        .flex {
+            display: flex;
         }
 
-        .glow-effect {
-            box-shadow: var(--neon-glow-cyan);
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .gap-2 {
+            gap: var(--space-sm);
+        }
+
+        .gap-4 {
+            gap: var(--space-md);
         }
     </style>
 </head>
-<body>
-    <!-- MATRIX BACKGROUND -->
-    <div class="matrix-bg"></div>
-    
-    <!-- CYBER PARTICLES -->
-    <div class="cyber-particles" id="cyber-particles"></div>
-
-    <!-- HEADER SUPREMO -->
+<body data-theme="light">
+    <!-- Header -->
     <header class="header">
-        <div class="logo-section">
-            <div class="ai-avatar" title="stealth-manager-ai Avatar">
-                <!-- AVATAR IMPLEMENTATION -->
-                <svg viewBox="0 0 200 200" style="width: 100%; height: 100%;">
-                    <defs>
-                        <radialGradient id="avatarGradient" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#FF0080;stop-opacity:0.8"/>
-                            <stop offset="70%" style="stop-color:#800026;stop-opacity:1"/>
-                            <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
-                        </radialGradient>
-                        <filter id="avatarGlow">
-                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                            <feMerge> 
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    
-                    <!-- Background Circle -->
-                    <circle cx="100" cy="100" r="95" fill="url(#avatarGradient)" stroke="#FF0080" stroke-width="3"/>
-                    
-                    <!-- Central Face Silhouette -->
-                    <path d="M100 45 Q115 60 130 100 Q125 155 100 160 Q75 155 70 100 Q85 60 100 45 Z" fill="#000"/>
-                    
-                    <!-- Face Details -->
-                    <ellipse cx="120" cy="90" rx="6" ry="10" fill="#FF0080" filter="url(#avatarGlow)"/>
-                    <ellipse cx="120" cy="90" rx="3" ry="6" fill="#00FFFF" filter="url(#avatarGlow)"/>
-                    
-                    <!-- Hair Split -->
-                    <path d="M100 50 L115 45 L125 65 L115 85 Z" fill="#FFFFFF"/>
-                    <path d="M85 45 L70 40 L60 60 L70 80 Z" fill="#000000"/>
-                    <path d="M115 85 L100 95 L85 85 Z" fill="#808080"/>
-                    
-                    <!-- Crack Lines -->
-                    <path d="M60 85 L75 100 L70 120 L90 135" stroke="#FF0080" stroke-width="2" fill="none"/>
-                    <path d="M110 55 L125 70 L120 85 L135 100" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
-                    
-                    <!-- Central AI Symbol -->
-                    <text x="100" y="110" text-anchor="middle" font-family="Orbitron" font-size="16" font-weight="bold" fill="#00FFFF">AI</text>
-                </svg>
-            </div>
-            <div>
-                <div class="logo-text">stealth-manager-ai</div>
-                <div class="version-badge">v3.0 SUPREMA</div>
-            </div>
+        <div class="header-left">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="stealthhub-logo.png" alt="StealthHub Logo">
+                </div>
+                <span>StealthHub</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Projects</a>
+                <a href="#" class="nav-item">Analytics</a>
+                <a href="#" class="nav-item">Settings</a>
+            </nav>
         </div>
-
-        <div class="status-bar">
-            <div class="status-item">
-                <div class="status-dot" id="ai-status"></div>
-                <span id="status-text">MiniMax Connected</span>
+        
+        <div class="header-right">
+            <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </button>
+            
+            <div class="auth-buttons" id="auth-buttons">
+                <button class="btn" id="login-btn">Sign In</button>
+                <button class="btn btn-primary" id="signup-btn">Sign Up</button>
             </div>
-            <div class="status-item">
-                <div class="status-dot" id="gaming-status"></div>
-                <span>Bypass Supreme Ready</span>
-            </div>
-            <div class="status-item">
-                <div class="status-dot" id="security-status"></div>
-                <span>Security Suite Active</span>
+            
+            <div class="user-menu hidden" id="user-menu">
+                <div class="user-avatar" id="user-avatar">U</div>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTAINER -->
+    <!-- Main Container -->
     <div class="main-container">
-        <!-- SIDEBAR AVANZADO -->
-        <aside class="sidebar">
-            <h3 class="sidebar-title">Expertise Areas</h3>
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M9 9h6v6H9z"/>
+                    </svg>
+                    Categor铆as Principales
+                </h3>
+                
+                <div class="category-item active" data-category="general">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>General Assistant</span>
+                    <span class="category-count">25</span>
+                </div>
+                
+                <div class="category-item" data-category="development">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16,18 22,12 16,6"/>
+                        <polyline points="8,6 2,12 8,18"/>
+                    </svg>
+                    <span>Development & Coding</span>
+                    <span class="category-count">42</span>
+                </div>
+                
+                <div class="category-item" data-category="security">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Security & Bypasses</span>
+                    <span class="category-count">18</span>
+                </div>
+                
+                <div class="category-item" data-category="analysis">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3v18h18"/>
+                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                    </svg>
+                    <span>Analysis & Research</span>
+                    <span class="category-count">31</span>
+                </div>
+                
+                <div class="category-item" data-category="creative">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        <path d="M13 12h3"/>
+                    </svg>
+                    <span>Creative & Content</span>
+                    <span class="category-count">19</span>
+                </div>
+            </div>
             
-            <!-- Gaming & Emulation -->
-            <div class="category-section">
-                <h4 class="category-title"><i class="fas fa-gamepad"></i> Gaming & Emulation</h4>
-                <ul class="feature-list">
-                    <li class="feature-item" data-category="dll-inject">
-                        <i class="fas fa-syringe feature-icon"></i>
-                        DLL Injection Tools
-                    </li>
-                    <li class="feature-item" data-category="emulator-bypass">
-                        <i class="fas fa-mobile-alt feature-icon"></i>
-                        BlueStacks/MSI Bypass
-                    </li>
-                    <li class="feature-item" data-category="freefire-bypass">
-                        <i class="fas fa-fire feature-icon"></i>
-                        Free Fire Bypass
-                    </li>
-                    <li class="feature-item" data-category="anti-detect">
-                        <i class="fas fa-user-secret feature-icon"></i>
-                        Anti-Detection Systems
-                    </li>
-                    <li class="feature-item" data-category="memory-patch">
-                        <i class="fas fa-edit feature-icon"></i>
-                        Memory Patching
-                    </li>
-                    <li class="feature-item" data-category="steam-bypass">
-                        <i class="fab fa-steam feature-icon"></i>
-                        Steam/CDK Bypass
-                    </li>
-                    <li class="feature-item" data-category="cheat-engine">
-                        <i class="fas fa-crosshairs feature-icon"></i>
-                        Cheat Engine Advanced
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Reverse Engineering -->
-            <div class="category-section">
-                <h4 class="category-title"><i class="fas fa-search-plus"></i> Reverse Engineering</h4>
-                <ul class="feature-list">
-                    <li class="feature-item" data-category="assembly">
-                        <i class="fas fa-microchip feature-icon"></i>
-                        x86/x64 Assembly
-                    </li>
-                    <li class="feature-item" data-category="debugging">
-                        <i class="fas fa-bug feature-icon"></i>
-                        Advanced Debugging
-                    </li>
-                    <li class="feature-item" data-category="disassembler">
-                        <i class="fas fa-code feature-icon"></i>
-                        IDA Pro/x64dbg
-                    </li>
-                    <li class="feature-item" data-category="hex-editor">
-                        <i class="fas fa-edit feature-icon"></i>
-                        Hex Editor Tools
-                    </li>
-                    <li class="feature-item" data-category="packing">
-                        <i class="fas fa-box feature-icon"></i>
-                        Packers/Unpackers
-                    </li>
-                    <li class="feature-item" data-category="cryptanalysis">
-                        <i class="fas fa-lock feature-icon"></i>
-                        Cryptographic Analysis
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Security & Anti-Cracking -->
-            <div class="category-section">
-                <h4 class="category-title"><i class="fas fa-shield-alt"></i> Security & Anti-Cracking</h4>
-                <ul class="feature-list">
-                    <li class="feature-item" data-category="obfuscation">
-                        <i class="fas fa-mask feature-icon"></i>
-                        Code Obfuscation
-                    </li>
-                    <li class="feature-item" data-category="anti-debug">
-                        <i class="fas fa-ban feature-icon"></i>
-                        Anti-Debugging
-                    </li>
-                    <li class="feature-item" data-category="vm-detect">
-                        <i class="fas fa-desktop feature-icon"></i>
-                        VM Detection Evasion
-                    </li>
-                    <li class="feature-item" data-category="behavior-bypass">
-                        <i class="fas fa-eye-slash feature-icon"></i>
-                        Behavior-Based Bypass
-                    </li>
-                    <li class="feature-item" data-category="rootkit">
-                        <i class="fas fa-dragon feature-icon"></i>
-                        Rootkit Development
-                    </li>
-                    <li class="feature-item" data-category="steganography">
-                        <i class="fas fa-invisible feature-icon"></i>
-                        Steganography Methods
-                    </li>
-                </ul>
-            </div>
-
-            <!-- DLL Development Mastery -->
-            <div class="category-section">
-                <h4 class="category-title"><i class="fas fa-cogs"></i> DLL Development</h4>
-                <ul class="feature-list">
-                    <li class="feature-item" data-category="runtime-libs">
-                        <i class="fas fa-cube feature-icon"></i>
-                        Runtime Libraries
-                    </li>
-                    <li class="feature-item" data-category="plugins">
-                        <i class="fas fa-puzzle-piece feature-icon"></i>
-                        Plugin Systems
-                    </li>
-                    <li class="feature-item" data-category="performance">
-                        <i class="fas fa-tachometer-alt feature-icon"></i>
-                        Performance DLLs
-                    </li>
-                    <li class="feature-item" data-category="encryption">
-                        <i class="fas fa-key feature-icon"></i>
-                        Security Libraries
-                    </li>
-                    <li class="feature-item" data-category="network">
-                        <i class="fas fa-network-wired feature-icon"></i>
-                        Network Libraries
-                    </li>
-                    <li class="feature-item" data-category="cross-platform">
-                        <i class="fas fa-globe feature-icon"></i>
-                        Multiplatform DLLs
-                    </li>
-                </ul>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                        <line x1="7" y1="7" x2="7.01" y2="7"/>
+                    </svg>
+                    Especialidades DLL
+                </h3>
+                
+                <div class="category-item" data-category="dll-injection">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M9 9h6v6H9z"/>
+                    </svg>
+                    <span>DLL Injection</span>
+                    <span class="category-count">12</span>
+                </div>
+                
+                <div class="category-item" data-category="memory-hacking">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>Memory Hacking</span>
+                    <span class="category-count">8</span>
+                </div>
+                
+                <div class="category-item" data-category="reverse-engineering">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                        <circle cx="12" cy="13" r="3"/>
+                    </svg>
+                    <span>Reverse Engineering</span>
+                    <span class="category-count">15</span>
+                </div>
             </div>
         </aside>
 
-        <!-- CHAT AREA -->
-        <main class="chat-area">
-            <div class="chat-header">
-                <h2 class="chat-title">stealth-manager-ai SUPREMA</h2>
-                <p class="chat-subtitle">La IA más avanzada para DLLs, Aimbots, Chams, Reverse Engineering y Bypass Supreme</p>
-            </div>
-
-            <div class="chat-messages" id="chat-messages">
-                <div class="message ai">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <!-- Welcome Section -->
+            <div class="welcome-section" id="welcome-section">
+                <div class="welcome-logo">
+                    <img src="stealthhub-logo.png" alt="StealthHub Logo" class="welcome-logo-img">
+                </div>
+                <h1 class="welcome-title">Bienvenido a StealthHub</h1>
+                <p class="welcome-subtitle">
+                    Tu plataforma profesional de IA avanzada. Dise帽ada para desarrolladores, investigadores y profesionales que necesitan soluciones especializadas con enfoque en seguridad, sigilo y tecnolog铆a de vanguardia.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"/>
+                                <polyline points="8,6 2,12 8,18"/>
+                            </svg>
+                        </div>
+                        <h3>Desarrollo Avanzado</h3>
+                        <p>C贸digo, DLL injection, y desarrollo especializado</p>
                     </div>
-                    <div class="message-content">
-                        <p>¡Bienvenido a <strong>stealth-manager-ai SUPREMA</strong>! 🔥</p>
-                        <p>Soy tu IA especializada en:</p>
-                        <ul>
-                            <li><strong>Gaming & Emulation:</strong> BlueStacks, Free Fire bypass, DLL injection, anti-detección</li>
-                            <li><strong>Reverse Engineering:</strong> x86/x64 assembly, debugging, hex editing</li>
-                            <li><strong>Security & Anti-Cracking:</strong> Obfuscation, anti-debugging, VM evasion</li>
-                            <li><strong>DLL Development:</strong> Runtime libs, plugins, performance, encryption</li>
-                        </ul>
-                        <p>Selecciona una categoría del sidebar o pregunta directamente sobre técnicas específicas.</p>
-                        <p class="message-timestamp">17:33 - AI Status: Conectada</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Seguridad & Bypasses</h3>
+                        <p>An谩lisis de seguridad y t茅cnicas avanzadas</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3>An谩lisis Profundo</h3>
+                        <p>Investigaci贸n y an谩lisis de datos complejos</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                                <path d="M13 12h3"/>
+                            </svg>
+                        </div>
+                        <h3>Contenido Creativo</h3>
+                        <p>Generaci贸n de contenido y soluciones creativas</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <h2 class="chat-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    AI Assistant
+                </h2>
+                <div class="chat-status">
+                    <div class="status-indicator"></div>
+                    <span>Conectado y listo para ayudarte</span>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- Welcome Message -->
+                <div class="message ai">
+                    <div class="message-header">
+                        <div class="message-avatar">AI</div>
+                        <span>StealthHub</span>
+                        <span class="text-muted">asistente especializado</span>
+                    </div>
+                    <div class="message-bubble">
+                        <p><strong>隆Hola! Soy tu AI Assistant profesional.</strong></p>
+                        <p>Estoy aqu铆 para ayudarte con:</p>
+                        <ul style="margin: var(--space-sm) 0; padding-left: var(--space-md);">
+                            <li><strong>Desarrollo:</strong> C贸digo, DLL injection, programaci贸n avanzada</li>
+                            <li><strong>Seguridad:</strong> An谩lisis de vulnerabilidades, bypasses</li>
+                            <li><strong>Investigaci贸n:</strong> An谩lisis profundo de datos y sistemas</li>
+                            <li><strong>Creatividad:</strong> Contenido y soluciones innovadoras</li>
+                        </ul>
+                        <p>Selecciona una categor铆a del sidebar o preg煤ntame directamente sobre tu proyecto.</p>
+                    </div>
+                    <div class="message-time" id="welcome-time"></div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
             <div class="chat-input-container">
-                <div class="input-wrapper">
+                <div class="chat-input-wrapper">
                     <textarea 
                         id="chat-input" 
-                        class="input-main" 
-                        placeholder="Pregúntame sobre: DLLs indetectables, gaming tools, reverse engineering, anti-cracking, memory patching, obfuscation, bypass techniques..."
+                        class="chat-input" 
+                        placeholder="Describe tu proyecto o pregunta aqu铆..."
                         rows="1"
                     ></textarea>
                     <div class="input-actions">
-                        <button class="action-btn" id="upload-btn" title="Upload file">
-                            <i class="fas fa-upload"></i>
-                        </button>
-                        <button class="action-btn" id="code-btn" title="Insert code">
-                            <i class="fas fa-code"></i>
-                        </button>
-                        <button class="action-btn send-btn" id="send-btn" title="Send message">
-                            <i class="fas fa-paper-plane"></i>
+                        <button id="send-btn" class="send-btn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,2 15,22 11,13 2,9"/>
+                            </svg>
                         </button>
                     </div>
                 </div>
-            </div>
-        </main>
-
-        <!-- QUICK ACTIONS -->
-        <div class="quick-actions">
-            <div class="quick-action" onclick="quickAction('dll-generator')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <h4 class="quick-action-title">DLL Generator</h4>
-                <p class="quick-action-desc">Genera DLLs indetectables para gaming</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('emulator-tools')">
-                <div class="quick-action-icon">
-                    <i class="fab fa-android"></i>
-                </div>
-                <h4 class="quick-action-title">Emulator Tools</h4>
-                <p class="quick-action-desc">BlueStacks/Free Fire bypass y optimización</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('reverse-tools')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h4 class="quick-action-title">Reverse Tools</h4>
-                <p class="quick-action-desc">Assembly, debugging, hex editing</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('security-suite')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h4 class="quick-action-title">Security Suite</h4>
-                <p class="quick-action-desc">Anti-debugging, obfuscation, evasion</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('memory-tools')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-memory"></i>
-                </div>
-                <h4 class="quick-action-title">Memory Tools</h4>
-                <p class="quick-action-desc">Memory patching y injection</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('freefire-bypass')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <h4 class="quick-action-title">Free Fire Bypass</h4>
-                <p class="quick-action-desc">Bypass completo Free Fire con DLLs</p>
-            </div>
-            
-            <div class="quick-action" onclick="quickAction('bypass-engine')">
-                <div class="quick-action-icon">
-                    <i class="fas fa-key"></i>
-                </div>
-                <h4 class="quick-action-title">Bypass Engine</h4>
-                <p class="quick-action-desc">Steam, CDK, endpoint security</p>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    
-    <script>
-        // CYBER PARTICLES SYSTEM
-        function createCyberParticles() {
-            const container = document.getElementById('cyber-particles');
-            const particleCount = 50;
+    <!-- Profile Modal -->
+    <div class="profile-modal" id="profile-modal">
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-avatar" id="profile-avatar">U</div>
+                <h2 class="profile-name" id="profile-name">Usuario</h2>
+                <p class="profile-email" id="profile-email">usuario@ejemplo.com</p>
+            </div>
             
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                container.appendChild(particle);
-            }
-        }
+            <div class="profile-section">
+                <h3 class="profile-section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                        <line x1="7" y1="7" x2="7.01" y2="7"/>
+                    </svg>
+                    Especialidades
+                </h3>
+                <div class="tags-container" id="skills-tags">
+                    <span class="tag skill">Developer</span>
+                    <span class="tag skill">DLL Injection</span>
+                    <span class="tag skill">Memory Hacking</span>
+                    <span class="tag skill">Reverse Engineering</span>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h3 class="profile-section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 11H1l4-4 4 4Z"/>
+                        <path d="M13 11v6"/>
+                        <path d="M21 11l-4 4"/>
+                        <path d="M17 15v6"/>
+                        <path d="M3 15v6"/>
+                    </svg>
+                    Intereses
+                </h3>
+                <div class="tags-container" id="interests-tags">
+                    <span class="tag interest">Cybersecurity</span>
+                    <span class="tag interest">AI/ML</span>
+                    <span class="tag interest">Blockchain</span>
+                    <span class="tag interest">Game Development</span>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h3 class="profile-section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Especializaciones
+                </h3>
+                <div class="tags-container" id="specialty-tags">
+                    <span class="tag specialty">Bypasses</span>
+                    <span class="tag specialty">Malware Analysis</span>
+                    <span class="tag specialty">Penetration Testing</span>
+                    <span class="tag specialty">Cryptography</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-full" onclick="closeProfileModal()">Cerrar Perfil</button>
+        </div>
+    </div>
 
-        // CHAT SYSTEM
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <img src="stealthhub-logo.png" alt="StealthHub Logo" class="modal-logo-img">
+                </div>
+                <h2 class="modal-title">Iniciar Sesi贸n</h2>
+                <p class="modal-subtitle">Accede a tu cuenta profesional</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label" for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="login-password">Contrase帽a</label>
+                    <input type="password" id="login-password" class="form-input" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Iniciar Sesi贸n</button>
+            </form>
+            
+            <p style="text-align: center; margin-top: var(--space-md); color: var(--text-secondary);">
+                驴No tienes cuenta? <a href="#" onclick="showSignupModal()" style="color: var(--accent-primary);">Reg铆strate aqu铆</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <img src="stealthhub-logo.png" alt="StealthHub Logo" class="modal-logo-img">
+                </div>
+                <h2 class="modal-title">Crear Cuenta</h2>
+                <p class="modal-subtitle">脷nete a la comunidad profesional</p>
+            </div>
+            
+            <form id="signup-form">
+                <!-- Informaci贸n B谩sica -->
+                <div class="signup-section">
+                    <h3 class="section-title">馃懁 Informaci贸n Personal</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-name">Nombre Completo</label>
+                        <input type="text" id="signup-name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="signup-email">Email</label>
+                        <input type="email" id="signup-email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="signup-password">Contrase帽a</label>
+                        <input type="password" id="signup-password" class="form-input" required>
+                    </div>
+                    
+                    <!-- Foto de Perfil -->
+                    <div class="form-group">
+                        <label class="form-label">Foto de Perfil</label>
+                        <div class="profile-photo-upload">
+                            <div class="photo-preview" id="photo-preview">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                    <circle cx="12" cy="13" r="4"/>
+                                </svg>
+                            </div>
+                            <input type="file" id="profile-photo" accept="image/*" class="file-input">
+                            <label for="profile-photo" class="btn btn-secondary btn-sm">Subir Foto</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Descripci贸n/Bio -->
+                    <div class="form-group">
+                        <label class="form-label" for="signup-bio">Descripci贸n Personal</label>
+                        <textarea id="signup-bio" class="form-textarea" rows="3" placeholder="Describe tu experiencia, objetivos o lo que te interesa aprender..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Nivel de Experiencia -->
+                <div class="signup-section">
+                    <h3 class="section-title">馃帗 Nivel de Experiencia</h3>
+                    <div class="experience-selector">
+                        <label class="experience-option">
+                            <input type="radio" name="experience_level" value="aprendiz">
+                            <div class="experience-card">
+                                <div class="experience-icon">馃尡</div>
+                                <h4>Aprendiz</h4>
+                                <p>Nuevo en el 谩rea, necesito orientaci贸n</p>
+                            </div>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience_level" value="desarrollador">
+                            <div class="experience-card">
+                                <div class="experience-icon">馃捇</div>
+                                <h4>Desarrollador</h4>
+                                <p>Tengo experiencia pr谩ctica</p>
+                            </div>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience_level" value="senior">
+                            <div class="experience-card">
+                                <div class="experience-icon">馃殌</div>
+                                <h4>Senior</h4>
+                                <p>Muy experimentado, busco retos</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Especialidades con Nivel -->
+                <div class="signup-section">
+                    <h3 class="section-title">鈿� Especialidades por Categor铆a</h3>
+                    <p class="section-description">Selecciona tus 谩reas de expertise y define tu nivel en cada una:</p>
+                    
+                    <div class="category-experience-grid">
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="developer" name="categories">
+                                <span>Development & Coding</span>
+                            </label>
+                            <select class="level-select" name="level_developer">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="security" name="categories">
+                                <span>Security & Bypasses</span>
+                            </label>
+                            <select class="level-select" name="level_security">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="dll-injection" name="categories">
+                                <span>DLL Injection</span>
+                            </label>
+                            <select class="level-select" name="level_dll_injection">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="memory-hacking" name="categories">
+                                <span>Memory Hacking</span>
+                            </label>
+                            <select class="level-select" name="level_memory_hacking">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="reverse-engineering" name="categories">
+                                <span>Reverse Engineering</span>
+                            </label>
+                            <select class="level-select" name="level_reverse_engineering">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="category-experience">
+                            <label class="category-label">
+                                <input type="checkbox" value="analysis" name="categories">
+                                <span>Analysis & Research</span>
+                            </label>
+                            <select class="level-select" name="level_analysis">
+                                <option value="beginner">Principiante</option>
+                                <option value="intermediate">Intermedio</option>
+                                <option value="expert">Experto</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intereses -->
+                <div class="signup-section">
+                    <h3 class="section-title">馃幆 Intereses Adicionales</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="ai-ml" name="interests">
+                            <span>AI/ML</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="blockchain" name="interests">
+                            <span>Blockchain</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="game-dev" name="interests">
+                            <span>Game Development</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="cryptography" name="interests">
+                            <span>Cryptography</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="malware-analysis" name="interests">
+                            <span>Malware Analysis</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="cybersecurity" name="interests">
+                            <span>Cybersecurity</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Badges Objetivo -->
+                <div class="signup-section">
+                    <h3 class="section-title">馃弳 Badges que Quieres Obtener</h3>
+                    <p class="section-description">Selecciona los logros que te gustar铆a alcanzar:</p>
+                    
+                    <div class="badges-preview">
+                        <div class="badge-option">
+                            <input type="checkbox" value="first-dll" name="target_badges">
+                            <div class="badge-card">
+                                <div class="badge-icon">馃拤</div>
+                                <span>Primera DLL Injection</span>
+                            </div>
+                        </div>
+                        <div class="badge-option">
+                            <input type="checkbox" value="bypass-master" name="target_badges">
+                            <div class="badge-card">
+                                <div class="badge-icon">馃洝锔�</div>
+                                <span>Bypass Master</span>
+                            </div>
+                        </div>
+                        <div class="badge-option">
+                            <input type="checkbox" value="memory-hacker" name="target_badges">
+                            <div class="badge-card">
+                                <div class="badge-icon">馃</div>
+                                <span>Memory Hacker</span>
+                            </div>
+                        </div>
+                        <div class="badge-option">
+                            <input type="checkbox" value="reverser" name="target_badges">
+                            <div class="badge-card">
+                                <div class="badge-icon">馃敩</div>
+                                <span>Reverse Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">馃殌 Crear Cuenta Profesional</button>
+            </form>
+            
+            <p style="text-align: center; margin-top: var(--space-md); color: var(--text-secondary);">
+                驴Ya tienes cuenta? <a href="#" onclick="showLoginModal()" style="color: var(--accent-primary);">Inicia sesi贸n aqu铆</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Application State
+        let currentCategory = 'general';
+        let isLoggedIn = false;
+        let currentUser = null;
+        let sessionId = 'default';
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        // DOM Elements
         const chatMessages = document.getElementById('chat-messages');
         const chatInput = document.getElementById('chat-input');
         const sendBtn = document.getElementById('send-btn');
+        const themeToggle = document.getElementById('theme-toggle');
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const authButtons = document.getElementById('auth-buttons');
+        const userMenu = document.getElementById('user-menu');
+        const userAvatar = document.getElementById('user-avatar');
 
+        // Initialize Theme
+        function initTheme() {
+            document.body.setAttribute('data-theme', currentTheme);
+            updateThemeIcon();
+        }
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.body.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = themeToggle.querySelector('svg');
+            if (currentTheme === 'dark') {
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            } else {
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+            }
+        }
+
+        // Initialize Welcome Time
+        function updateWelcomeTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('es-ES', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            const welcomeTime = document.getElementById('welcome-time');
+            if (welcomeTime) {
+                welcomeTime.textContent = timeString;
+            }
+        }
+
+        // Modal Functions
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+        }
+
+        function hideModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+        }
+
+        function showLoginModal() {
+            hideModal('signup-modal');
+            showModal('login-modal');
+        }
+
+        function showSignupModal() {
+            hideModal('login-modal');
+            showModal('signup-modal');
+        }
+
+        function showProfileModal() {
+            if (!currentUser) return;
+            
+            // Update profile modal content
+            const profileContent = `
+                <div class="profile-header">
+                    <div class="profile-avatar-large">
+                        ${currentUser.profilePhoto === 'custom' && currentUser.profilePhotoData 
+                            ? `<img src="${currentUser.profilePhotoData}" alt="${currentUser.name}">`
+                            : `<span>${currentUser.name.charAt(0).toUpperCase()}</span>`
+                        }
+                    </div>
+                    <div class="profile-info">
+                        <h2>${currentUser.name}</h2>
+                        <p class="profile-bio">${currentUser.bio || 'Sin descripci贸n disponible'}</p>
+                        <div class="profile-level">Nivel: ${currentUser.level}</div>
+                        <div class="profile-experience">Experiencia: ${currentUser.experienceLevel}</div>
+                    </div>
+                </div>
+                
+                <div class="profile-sections">
+                    <div class="profile-section">
+                        <h3>鈿� Categor铆as y Niveles</h3>
+                        <div class="categories-grid">
+                            ${Object.entries(currentUser.categories || {}).map(([category, level]) => `
+                                <div class="category-item">
+                                    <span class="category-name">${formatCategoryName(category)}</span>
+                                    <span class="level-badge level-${level}">${formatLevelName(level)}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3>馃弳 Badges Obtenidos</h3>
+                        <div class="badges-grid">
+                            ${currentUser.badges && currentUser.badges.length > 0 
+                                ? currentUser.badges.map(badge => `
+                                    <div class="badge-item earned">
+                                        <div class="badge-icon">${badge.icon}</div>
+                                        <span>${badge.name}</span>
+                                    </div>
+                                `).join('')
+                                : '<p class="no-badges">A煤n no has obtenido badges. 隆Sigue aprendiendo!</p>'
+                            }
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3>馃幆 Badges Objetivo</h3>
+                        <div class="badges-grid">
+                            ${currentUser.targetBadges.map(targetBadge => `
+                                <div class="badge-item target">
+                                    <div class="badge-icon">${getBadgeIcon(targetBadge)}</div>
+                                    <span>${formatBadgeName(targetBadge)}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3>馃帗 Especialidades</h3>
+                        <div class="specialties-tags">
+                            ${(currentUser.specialties || []).map(specialty => `
+                                <span class="specialty-tag">${specialty}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Update modal content if element exists, otherwise create it
+            let profileModal = document.getElementById('profile-modal');
+            if (profileModal) {
+                const modalContent = profileModal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.innerHTML = profileContent + modalContent.innerHTML.substring(modalContent.innerHTML.indexOf('</div>') + 6);
+                }
+            }
+            
+            showModal('profile-modal');
+        }
+
+        function formatCategoryName(category) {
+            const names = {
+                'developer': 'Development & Coding',
+                'security': 'Security & Bypasses',
+                'dll-injection': 'DLL Injection',
+                'memory-hacking': 'Memory Hacking',
+                'reverse-engineering': 'Reverse Engineering',
+                'analysis': 'Analysis & Research'
+            };
+            return names[category] || category;
+        }
+
+        function formatLevelName(level) {
+            const names = {
+                'beginner': 'Principiante',
+                'intermediate': 'Intermedio',
+                'expert': 'Experto'
+            };
+            return names[level] || level;
+        }
+
+        function getBadgeIcon(badge) {
+            const icons = {
+                'first-dll': '馃拤',
+                'bypass-master': '馃洝锔�',
+                'memory-hacker': '馃',
+                'reverser': '馃敩'
+            };
+            return icons[badge] || '馃弳';
+        }
+
+        function formatBadgeName(badge) {
+            const names = {
+                'first-dll': 'Primera DLL Injection',
+                'bypass-master': 'Bypass Master',
+                'memory-hacker': 'Memory Hacker',
+                'reverser': 'Reverse Engineer'
+            };
+            return names[badge] || badge;
+        }
+
+        function closeProfileModal() {
+            hideModal('profile-modal');
+        }
+
+        // Authentication Functions
+        function login(email, password) {
+            // Simulate login process
+            setTimeout(() => {
+                isLoggedIn = true;
+                currentUser = {
+                    email: email,
+                    name: email.split('@')[0],
+                    skills: ['Developer', 'Security Analyst'],
+                    interests: ['Cybersecurity', 'AI/ML'],
+                    specialties: ['Bypasses', 'Penetration Testing']
+                };
+                
+                // Update UI
+                authButtons.classList.add('hidden');
+                userMenu.classList.remove('hidden');
+                userAvatar.textContent = currentUser.name.charAt(0).toUpperCase();
+                
+                hideModal('login-modal');
+                
+                // Hide welcome section and show chat
+                document.getElementById('welcome-section').style.display = 'none';
+                
+                // Add login message to chat
+                addMessage(`隆Bienvenido, ${currentUser.name}!`, true);
+                addMessage(`Sesi贸n iniciada correctamente. Has seleccionado las siguientes especialidades: ${currentUser.skills.join(', ')}. 驴En qu茅 puedo ayudarte hoy?`, false);
+            }, 1000);
+        }
+
+        function signup(userProfile) {
+            // Simulate signup process
+            setTimeout(() => {
+                isLoggedIn = true;
+                currentUser = {
+                    name: userProfile.name,
+                    email: userProfile.email,
+                    bio: userProfile.bio || '',
+                    profilePhoto: userProfile.profilePhoto,
+                    experienceLevel: userProfile.experienceLevel,
+                    categories: userProfile.categories,
+                    interests: userProfile.interests,
+                    targetBadges: userProfile.targetBadges,
+                    badges: userProfile.badges,
+                    level: getUserLevel(userProfile.experienceLevel, userProfile.categories),
+                    specialties: generateSpecialties(userProfile.categories, userProfile.interests),
+                    createdAt: userProfile.createdAt
+                };
+                
+                // Save to localStorage
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                
+                // Update UI
+                authButtons.classList.add('hidden');
+                userMenu.classList.remove('hidden');
+                updateUserAvatar();
+                
+                hideModal('signup-modal');
+                
+                // Hide welcome section and show chat
+                document.getElementById('welcome-section').style.display = 'none';
+                
+                // Add welcome message to chat
+                addMessage(`馃殌 隆Bienvenido a la plataforma profesional m谩s avanzada, ${currentUser.name}!`, true);
+                addMessage(`Tu perfil ha sido configurado exitosamente. Eres un **${currentUser.level}** con experiencia en: ${Object.keys(currentUser.categories).map(cat => `${cat} (${currentUser.categories[cat]})`).join(', ')}.`, false);
+                addMessage(`隆Listo para empezar tu journey hacia dominar ${currentUser.targetBadges.length > 0 ? currentUser.targetBadges.join(', ') : 'nuevas habilidades'}!`, false);
+            }, 1500);
+        }
+
+        function getUserLevel(experienceLevel, categories) {
+            const expertCategories = Object.values(categories).filter(level => level === 'expert').length;
+            const intermediateCategories = Object.values(categories).filter(level => level === 'intermediate').length;
+            
+            if (experienceLevel === 'senior' && expertCategories >= 3) return 'Experto Senior';
+            if (expertCategories >= 2) return 'Experto';
+            if (intermediateCategories >= 3) return 'Avanzado';
+            if (intermediateCategories >= 1) return 'Intermedio';
+            return 'Novato';
+        }
+
+        function generateSpecialties(categories, interests) {
+            const specialties = [];
+            
+            // Generar especialidades basadas en categor铆as y niveles
+            Object.entries(categories).forEach(([category, level]) => {
+                switch(category) {
+                    case 'developer':
+                        if (level === 'expert') specialties.push('Software Architecture', 'Performance Optimization');
+                        else if (level === 'intermediate') specialties.push('Code Review', 'System Design');
+                        else specialties.push('Clean Code', 'Debugging');
+                        break;
+                    case 'security':
+                        if (level === 'expert') specialties.push('Advanced Bypasses', 'Malware Analysis');
+                        else if (level === 'intermediate') specialties.push('Vulnerability Assessment', 'Security Audits');
+                        else specialties.push('Basic Security', 'Threat Detection');
+                        break;
+                    case 'dll-injection':
+                        if (level === 'expert') specialties.push('Stealth Injection', 'Process Hollowing');
+                        else if (level === 'intermediate') specialties.push('LoadLibraryA', 'Manual Mapping');
+                        else specialties.push('Basic Injection', 'DLL Loading');
+                        break;
+                    case 'memory-hacking':
+                        if (level === 'expert') specialties.push('Memory Patching', 'Hook Implementation');
+                        else if (level === 'intermediate') specialties.push('Memory Scanning', 'Pattern Matching');
+                        else specialties.push('Basic Memory Access', 'Memory Reading');
+                        break;
+                    case 'reverse-engineering':
+                        if (level === 'expert') specialties.push('Advanced Disassembly', 'Code Analysis');
+                        else if (level === 'intermediate') specialties.push('PE Analysis', 'Function Mapping');
+                        else specialties.push('Basic Analysis', 'String Extraction');
+                        break;
+                }
+            });
+            
+            return specialties;
+        }
+
+        function updateUserAvatar() {
+            if (currentUser.profilePhoto === 'custom' && currentUser.profilePhotoData) {
+                userAvatar.innerHTML = `<img src="${currentUser.profilePhotoData}" alt="${currentUser.name}" style="width: 100%; height: 100%; border-radius: 50%;">`;
+            } else {
+                userAvatar.textContent = currentUser.name.charAt(0).toUpperCase();
+            }
+        }
+
+        function logout() {
+            isLoggedIn = false;
+            currentUser = null;
+            
+            // Update UI
+            userMenu.classList.add('hidden');
+            authButtons.classList.remove('hidden');
+            
+            // Show welcome section again
+            document.getElementById('welcome-section').style.display = 'block';
+            
+            // Add logout message
+            addMessage('Sesi贸n cerrada correctamente. 隆Hasta la pr贸xima!', false);
+        }
+
+        // Chat Functions
         function addMessage(content, isUser = false) {
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${isUser ? 'user' : 'ai'}`;
             
-            const avatar = isUser ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
-            const timestamp = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+            const timestamp = new Date().toLocaleTimeString('es-ES', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
             
             messageDiv.innerHTML = `
-                <div class="message-avatar">${avatar}</div>
-                <div class="message-content">
-                    ${content}
-                    <div class="message-timestamp">${timestamp}</div>
+                <div class="message-header">
+                    <div class="message-avatar">${isUser ? currentUser?.name?.charAt(0).toUpperCase() || 'U' : 'AI'}</div>
+                    <span>${isUser ? currentUser?.name || 'Usuario' : 'stealth-manager-ai'}</span>
+                    <span class="text-muted">${isUser ? 't煤' : 'asistente especializado'}</span>
                 </div>
+                <div class="message-bubble">
+                    ${content}
+                </div>
+                <div class="message-time">${timestamp}</div>
             `;
             
             chatMessages.appendChild(messageDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
-        // AI RESPONSE GENERATOR
-        function generateAIResponse(message) {
-            const responses = {
-                'dll': {
-                    title: 'DLL Development',
-                    content: `<strong>DLL Indetectables:</strong><br>
-                    • Runtime Libraries: CRT, MFC, ATL, STL, Boost<br>
-                    • Memory Management: Heap allocation, stack operations<br>
-                    • Export/Import handling: Dynamic linking, load-time vs runtime<br>
-                    • Platform support: Windows (.dll), Linux (.so), macOS (.dylib)<br><br>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span>Example: DLL Injection Pattern</span>
-                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-c">#include &lt;windows.h&gt;
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
-    if (reason == DLL_PROCESS_ATTACH) {
-        // Stealth initialization
-        HideModule();
-        BypassEDR();
-    }
-    return TRUE;
-}</code></pre>
-                    </div>`
-                },
-                'gaming': {
-                    title: 'Aimbots, Chams & Bypass Supreme',
-                    content: `<strong>Aimbots, Chams & Bypass Supreme:</strong><br>
-                    • BlueStacks optimization: Root bypass, detection evasion<br>
-                    • Free Fire bypass: Health, aim, speed, anti-detection<br>
-                    • DLL injection: LoadLibrary, CreateRemoteThread, manual map<br>
-                    • Anti-detección: Process hollowing, DLL unhooking<br><br>
-                    <strong>Steam/CDK Bypass:</strong><br>
-                    • Steam emulator: License bypass, offline activation<br>
-                    • CDK generation: Algorithm analysis, pattern recognition<br>
-                    • Hardware fingerprint spoofing<br>
-                    • Registry modification strategies`
-                },
-                'reverse': {
-                    title: 'Reverse Engineering',
-                    content: `<strong>Advanced Reverse Engineering:</strong><br>
-                    • x86/x64 Assembly: Registers, flags, instruction sets<br>
-                    • Debugging: x64dbg, OllyDbg, IDA Pro analysis<br>
-                    • Hex editing: Binary patching, code caves<br>
-                    • Packers: UPX, Themida, PECompact analysis<br><br>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span>Assembly Pattern Recognition</span>
-                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-assembly">push ebp
-mov ebp, esp
-sub esp, 0x10
-; Pattern: Function prologue
-; Counter: Add debugging breakpoints</code></pre>
-                    </div>`
-                },
-                'security': {
-                    title: 'Security & Anti-Cracking',
-                    content: `<strong>Anti-Cracking Techniques:</strong><br>
-                    • Obfuscation: Control flow flattening, string encryption<br>
-                    • Anti-debugging: IsDebuggerPresent, NtGlobalFlag checks<br>
-                    • VM detection: Timing attacks, hardware fingerprinting<br>
-                    • Behavior-based bypass: Dynamic analysis evasion<br><br>
-                    <strong>Advanced Techniques:</strong><br>
-                    • Self-modifying code: Runtime decryption<br>
-                    • Cryptographic protection: AES, RSA implementation<br>
-                    • Rootkit development: Kernel-level stealth<br>
-                    • Steganography: Data hiding in images/files`
-                }
-            };
-
-            const lowerMessage = message.toLowerCase();
-            if (lowerMessage.includes('dll') || lowerMessage.includes('library')) {
-                return responses.dll;
-            } else if (lowerMessage.includes('gaming') || lowerMessage.includes('emulator') || lowerMessage.includes('bluestacks')) {
-                return responses.gaming;
-            } else if (lowerMessage.includes('reverse') || lowerMessage.includes('assembly') || lowerMessage.includes('debug')) {
-                return responses.reverse;
-            } else if (lowerMessage.includes('security') || lowerMessage.includes('crack') || lowerMessage.includes('obfuscation')) {
-                return responses.security;
-            } else {
-                return {
-                    title: 'AI Assistant',
-                    content: `He analizado tu consulta sobre "${message}". Mi especialidad incluye:<br><br>
-                    • <strong>DLL Development:</strong> Runtime libraries, plugins, performance optimization<br>
-                    • <strong>Gaming & Emulation:</strong> BlueStacks/Free Fire bypass, anti-detection, memory tools<br>
-                    • <strong>Reverse Engineering:</strong> x86/x64 assembly, debugging, hex editing<br>
-                    • <strong>Security & Anti-Cracking:</strong> Obfuscation, anti-debugging, VM evasion<br><br>
-                    ¿Te gustaría que profundice en algún tema específico?`
-                };
-            }
-        }
-
-        function handleSendMessage() {
-            const message = chatInput.value.trim();
-            if (!message) return;
-
-            // Add user message
-            addMessage(message, true);
-            
-            // Clear input
-            chatInput.value = '';
-            
-            // Generate AI response
-            const response = generateAIResponse(message);
-            const content = `<h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">${response.title}</h4>${response.content}`;
-            
-            // Show typing indicator
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'message ai';
-            typingDiv.innerHTML = `
-                <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                <div class="message-content">
+        function showLoading() {
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'message ai';
+            loadingDiv.id = 'loading-message';
+            loadingDiv.innerHTML = `
+                <div class="message-header">
+                    <div class="message-avatar">AI</div>
+                    <span>StealthHub</span>
+                    <span class="text-muted">procesando...</span>
+                </div>
+                <div class="message-bubble">
                     <div class="loading-dots">
                         <div class="dot"></div>
                         <div class="dot"></div>
@@ -1143,153 +2194,256 @@ sub esp, 0x10
                     </div>
                 </div>
             `;
-            chatMessages.appendChild(typingDiv);
+            
+            chatMessages.appendChild(loadingDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            // Simulate AI response delay
-            setTimeout(() => {
-                typingDiv.remove();
-                addMessage(content);
-            }, 1500 + Math.random() * 1000);
         }
 
-        // QUICK ACTIONS
-        function quickAction(action) {
-            const actionPrompts = {
-                'dll-generator': 'Genera una DLL indetectable para gaming con técnicas anti-debugging',
-                'emulator-tools': 'Herramientas para bypass de detección en BlueStacks y Nox emulator',
-                'reverse-tools': 'Técnicas avanzadas de reverse engineering y debugging',
-                'security-suite': 'Anti-cracking suite con obfuscation y evasion techniques',
-                'memory-tools': 'Memory patching e injection para bypass de protecciones',
-                'bypass-engine': 'Steam/CDK bypass engine y endpoint security evasion'
-            };
-
-            const prompt = actionPrompts[action];
-            if (prompt) {
-                chatInput.value = prompt;
-                handleSendMessage();
+        function hideLoading() {
+            const loadingMessage = document.getElementById('loading-message');
+            if (loadingMessage) {
+                loadingMessage.remove();
             }
         }
 
-        // FEATURE ITEMS CLICK HANDLER
-        document.querySelectorAll('.feature-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const category = this.dataset.category;
-                const prompts = {
-                    'dll-inject': 'DLL injection techniques: LoadLibrary, CreateRemoteThread, manual mapping',
-                    'emulator-bypass': 'Emulator bypass: BlueStacks/Nox detection evasion and optimization',
-                    'freefire-bypass': 'Free Fire bypass completo: Health bypass, aim hack, speed mod, DLL injection indetectable',
-                    'anti-detect': 'Anti-detection systems: Process hollowing, DLL unhooking, stealth injection',
-                    'memory-patch': 'Memory patching: Binary modification, code caves, runtime patching',
-                    'steam-bypass': 'Steam/CDK bypass: License evasion, offline activation, fingerprint spoofing',
-                    'cheat-engine': 'Cheat Engine advanced: Memory scanning, pointer chains, AOB injection',
-                    'assembly': 'x86/x64 assembly: Registers, instructions, calling conventions',
-                    'debugging': 'Advanced debugging: x64dbg, OllyDbg, IDA Pro analysis techniques',
-                    'disassembler': 'Disassembler tools: IDA Pro, Ghidra, x64dbg analysis',
-                    'hex-editor': 'Hex editor tools: Binary patching, hex editing, offset calculations',
-                    'packing': 'Packers/unpackers: UPX, Themida, PECompact analysis and unpacking',
-                    'cryptanalysis': 'Cryptographic analysis: AES, RSA, custom cipher analysis',
-                    'obfuscation': 'Code obfuscation: Control flow flattening, string encryption, API hiding',
-                    'anti-debug': 'Anti-debugging: IsDebuggerPresent, NtGlobalFlag, anti-reverse techniques',
-                    'vm-detect': 'VM detection evasion: Hardware fingerprinting, timing attacks',
-                    'behavior-bypass': 'Behavior-based bypass: Dynamic analysis evasion, sandbox detection',
-                    'rootkit': 'Rootkit development: Kernel-level stealth, driver development',
-                    'steganography': 'Steganography: Data hiding in images, files, network traffic',
-                    'runtime-libs': 'Runtime libraries: CRT, MFC, ATL, STL, memory management',
-                    'plugins': 'Plugin systems: Dynamic loading, interface contracts, version management',
-                    'performance': 'Performance DLLs: SIMD, multi-threading, memory pooling',
-                    'encryption': 'Security libraries: AES, RSA, hashing, digital signatures',
-                    'network': 'Network libraries: TCP/UDP, HTTP/HTTPS, sockets, message queues',
-                    'cross-platform': 'Multiplatform DLLs: Windows, Linux, macOS, Android compatibility'
-                };
-                
-                const prompt = prompts[category];
-                if (prompt) {
-                    chatInput.value = prompt;
-                    document.querySelectorAll('.feature-item').forEach(el => el.classList.remove('active'));
-                    this.classList.add('active');
-                    handleSendMessage();
-                }
-            });
-        });
+        async function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
 
-        // COPY CODE FUNCTION
-        function copyCode(button) {
-            const codeBlock = button.closest('.code-block');
-            const code = codeBlock.querySelector('pre code');
-            navigator.clipboard.writeText(code.textContent);
+            // Check if logged in
+            if (!isLoggedIn) {
+                addMessage('Por favor, inicia sesi贸n para usar el chat.', false);
+                return;
+            }
+
+            // Add user message
+            addMessage(message, true);
+            chatInput.value = '';
             
-            button.textContent = 'Copied!';
-            setTimeout(() => {
-                button.textContent = 'Copy';
-            }, 2000);
+            // Update send button state
+            sendBtn.disabled = true;
+            
+            // Show loading
+            showLoading();
+            
+            try {
+                // Call API with enhanced user profile
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        session_id: sessionId,
+                        category: currentCategory,
+                        user_profile: {
+                            name: currentUser?.name || 'Usuario',
+                            experience_level: currentUser?.experienceLevel || 'aprendiz',
+                            categories: currentUser?.categories || {},
+                            current_category_level: currentUser?.categories?.[currentCategory] || 'beginner',
+                            interests: currentUser?.interests || [],
+                            specialties: currentUser?.specialties || [],
+                            level: currentUser?.level || 'Novato',
+                            target_badges: currentUser?.targetBadges || []
+                        },
+                        // Legacy support
+                        user_skills: Object.keys(currentUser?.categories || {}),
+                        user_interests: currentUser?.interests || []
+                    })
+                });
+                
+                const data = await response.json();
+                hideLoading();
+                
+                if (data.success) {
+                    addMessage(data.response, false);
+                } else {
+                    addMessage(`Error: ${data.error || 'No se pudo procesar el mensaje'}`, false);
+                }
+            } catch (error) {
+                hideLoading();
+                console.error('Error:', error);
+                addMessage('Error de conexi贸n. Verifica que el servidor est茅 funcionando.', false);
+            }
         }
 
-        // EVENT LISTENERS
-        sendBtn.addEventListener('click', handleSendMessage);
+        // Event Listeners
+        themeToggle.addEventListener('click', toggleTheme);
+        sendBtn.addEventListener('click', sendMessage);
+        
         chatInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
-                handleSendMessage();
+                sendMessage();
             }
         });
 
-        // AUTO-RESIZE TEXTAREA
+        chatInput.addEventListener('input', function() {
+            const hasText = this.value.trim().length > 0;
+            sendBtn.disabled = !hasText;
+        });
+
+        // Auto-resize textarea
         chatInput.addEventListener('input', function() {
             this.style.height = 'auto';
             this.style.height = Math.min(this.scrollHeight, 120) + 'px';
         });
 
-        // STATUS ANIMATIONS
-        setInterval(() => {
-            const dots = document.querySelectorAll('.status-dot');
-            dots.forEach(dot => {
-                dot.style.transform = `scale(${1 + Math.random() * 0.3})`;
-                setTimeout(() => {
-                    dot.style.transform = 'scale(1)';
-                }, 200);
+        // Category selection
+        document.querySelectorAll('.category-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.category-item').forEach(el => {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
+                currentCategory = this.dataset.category;
+                
+                // Add category change message
+                const categoryNames = {
+                    'general': 'General Assistant',
+                    'development': 'Development & Coding',
+                    'security': 'Security & Bypasses',
+                    'analysis': 'Analysis & Research',
+                    'creative': 'Creative & Content',
+                    'dll-injection': 'DLL Injection',
+                    'memory-hacking': 'Memory Hacking',
+                    'reverse-engineering': 'Reverse Engineering'
+                };
+                
+                addMessage(`Categor铆a cambiada a: ${categoryNames[currentCategory] || currentCategory}`, false);
             });
-        }, 3000);
-
-        // INITIALIZE
-        document.addEventListener('DOMContentLoaded', function() {
-            createCyberParticles();
-            
-            // Welcome message after delay
-            setTimeout(() => {
-                addMessage(`<strong>🚀 IA SUPREMA Activada</strong><br>
-                Todas las funcionalidades están online:<br>
-                ✅ Bypass Supreme Ready<br>
-                ✅ Reverse Engineering Active<br>
-                ✅ Security Suite Armed<br>
-                ✅ DLL Generator Online<br><br>
-                ¡Estoy lista para ayudarte con cualquier proyecto de seguridad o desarrollo!`);
-            }, 2000);
         });
 
-        // KEYBOARD SHORTCUTS
+        // Authentication events
+        loginBtn.addEventListener('click', showLoginModal);
+        signupBtn.addEventListener('click', showSignupModal);
+        userMenu.addEventListener('click', showProfileModal);
+
+        // Modal close events
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                }
+            });
+        });
+
+        // Form submissions
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            login(email, password);
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const bio = document.getElementById('signup-bio').value;
+            
+            // Foto de perfil
+            const profilePhoto = document.getElementById('profile-photo').files[0];
+            const profilePhotoData = window.profilePhotoData || null;
+            
+            // Nivel de experiencia
+            const experienceLevel = document.querySelector('input[name="experience_level"]:checked')?.value || 'aprendiz';
+            
+            // Categor铆as con niveles
+            const categoryCheckboxes = Array.from(document.querySelectorAll('input[name="categories"]:checked'));
+            const categoriesWithLevels = {};
+            
+            categoryCheckboxes.forEach(cb => {
+                const category = cb.value;
+                const levelSelect = document.querySelector(`select[name="level_${category}"]`);
+                categoriesWithLevels[category] = levelSelect ? levelSelect.value : 'beginner';
+            });
+            
+            // Intereses
+            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
+            
+            // Badges objetivo
+            const targetBadges = Array.from(document.querySelectorAll('input[name="target_badges"]:checked')).map(cb => cb.value);
+            
+            // Crear perfil completo
+            const userProfile = {
+                name,
+                email,
+                password,
+                bio,
+                profilePhoto: profilePhotoData ? 'custom' : 'default',
+                profilePhotoData: profilePhotoData,
+                experienceLevel,
+                categories: categoriesWithLevels,
+                interests,
+                targetBadges,
+                createdAt: new Date().toISOString(),
+                badges: [], // Badges obtenidos (empezamos vac铆os)
+                level: 'Novato' // Se actualizar谩 seg煤n experiencia
+            };
+            
+            signup(userProfile);
+        });
+
+        // Photo Upload Functionality
+        document.getElementById('profile-photo').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const photoPreview = document.getElementById('photo-preview');
+                    photoPreview.innerHTML = `<img src="${event.target.result}" alt="Profile photo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
+                    
+                    // Store photo data in a variable that can be accessed by signup
+                    window.profilePhotoData = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            updateWelcomeTime();
+            
+            // Check if user was previously logged in
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                currentTheme = savedTheme;
+                initTheme();
+            }
+            
+            // Focus chat input
+            chatInput.focus();
+        });
+
+        // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey) {
+            if (e.ctrlKey || e.metaKey) {
                 switch(e.key) {
                     case '1':
                         e.preventDefault();
-                        document.querySelector('[data-category="dll-inject"]').click();
+                        document.querySelector('[data-category="general"]').click();
                         break;
                     case '2':
                         e.preventDefault();
-                        document.querySelector('[data-category="emulator-bypass"]').click();
+                        document.querySelector('[data-category="development"]').click();
                         break;
                     case '3':
                         e.preventDefault();
-                        document.querySelector('[data-category="assembly"]').click();
-                        break;
-                    case '4':
-                        e.preventDefault();
-                        document.querySelector('[data-category="obfuscation"]').click();
+                        document.querySelector('[data-category="security"]').click();
                         break;
                 }
+            }
+            
+            // Theme toggle with Ctrl+Shift+D
+            if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+                e.preventDefault();
+                toggleTheme();
             }
         });
     </script>
 </body>
-</html>
+    </html>
