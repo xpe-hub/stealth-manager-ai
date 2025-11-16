@@ -1,9 +1,12 @@
 {
-  "version": 2,
-  "functions": {"api/**/*.py": {"runtime": "python@3.9"}},
-  "routes": [
-    {"src": "/api/(.*)", "dest": "api/$1"},
-    {"src": "/(.*)", "dest": "/index.html"}
-  ],
-  "env": {"FLASK_ENV": "production"}
+  "rewrites": [
+    {
+      "source": "/api/(.*)", 
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)", 
+      "destination": "/index.html"
+    }
+  ]
 }
