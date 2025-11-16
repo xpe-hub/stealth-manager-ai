@@ -1,4 +1,4 @@
-# 🚀 StealthHub - Elite Cybersecurity Platform
+# 🚀 StealthHub - Your dreams come true
 
 <div align="center">
 
@@ -20,7 +20,7 @@
 
 ## ✨ **¿Qué es StealthHub?**
 
-StealthHub es una **plataforma elite de ciberseguridad** diseñada para profesionales de seguridad, pentesters y expertos en reverse engineering. Combina herramientas avanzadas de hacking con inteligencia artificial contextual y una interfaz profesional moderna.
+StealthHub es una **comunidad gamer, segura y privada** diseñada para developers, usuarios que quieren aprender a crear, pentesters y expertos en reverse engineering. Combina herramientas avanzadas de hacking con inteligencia artificial contextual y una interfaz profesional moderna.
 
 ### 🎯 **Características Principales**
 
@@ -397,7 +397,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ### **📞 Contact & Legal**
 
 - **Author**: xpe.nettt
-- **Email**: contact@stealthhub.io
+- **Email**: xpe.nettt@gmail.com
 - **Website**: https://stealthhub.io
 
 > **Remember**: Use this tool responsibly and only on systems you own or have explicit permission to test.
