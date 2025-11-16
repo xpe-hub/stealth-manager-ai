@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT --workers 2 --worker-class gevent --timeout 120 backend.app_railway:app
+web: gunicorn --bind 0.0.0.0:$PORT --workers 3 --worker-class gevent --timeout 120 wsgi:application
